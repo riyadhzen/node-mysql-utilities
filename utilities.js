@@ -1,10 +1,7 @@
 'use strict';
 
-const identifierRegexp = /^[0-9,a-z,A-Z_.]*$/;
-
 const escapeIdentifier = (str, quote) => {
   quote = quote || '`';
-  if (identifierRegexp.test(str)) return str;
   return quote + str + quote;
 };
 
